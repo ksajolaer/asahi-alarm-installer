@@ -1,157 +1,35 @@
 {
     "os_list": [
         {
-            "name": "Fedora Asahi Remix 39 with KDE Plasma",
-            "default_os_name": "Fedora Linux with KDE Plasma",
+            "name": "Arch Linux ARM Asahi Remix with KDE Plasma",
+            "default_os_name": "Asahi Linux",
             "boot_object": "m1n1.bin",
             "next_object": "m1n1/boot.bin",
-            "package": "https://asahilinux-fedora.b-cdn.net/os/fedora-39-kde-202312191235.zip",
-            "icon": "fedora.icns",
+            "package": "asahi-plasma-20231012-1.zip",
             "supported_fw": ["12.3", "12.3.1", "13.5"],
-            "extras": [
-                "https://codecs.fedoraproject.org/openh264/39/aarch64/os/Packages/g/gstreamer1-plugin-openh264-1.22.1-1.fc39.aarch64.rpm",
-                "https://codecs.fedoraproject.org/openh264/39/aarch64/os/Packages/m/mozilla-openh264-2.3.1-2.fc39.aarch64.rpm",
-                "https://codecs.fedoraproject.org/openh264/39/aarch64/os/Packages/o/openh264-2.3.1-2.fc39.aarch64.rpm"
-            ],
             "partitions": [
                 {
                     "name": "EFI",
                     "type": "EFI",
-                    "size": "524288000B",
+                    "size": "500MB",
                     "format": "fat",
-                    "volume_id": "0x1d373ad8",
+                    "volume_id": "0x2abf9f91",
                     "copy_firmware": true,
                     "copy_installer_data": true,
                     "source": "esp"
                 },
                 {
-                    "name": "Boot",
-                    "type": "Linux",
-                    "size": "1073741824B",
-                    "image": "boot.img"
-                },
-                {
                     "name": "Root",
                     "type": "Linux",
-                    "size": "13094596608B",
+                    "size": "12GB",
                     "expand": true,
                     "image": "root.img"
                 }
             ]
         },
         {
-            "name": "Fedora Asahi Remix 39 with GNOME",
-            "default_os_name": "Fedora Linux with GNOME",
-            "boot_object": "m1n1.bin",
-            "next_object": "m1n1/boot.bin",
-            "package": "https://asahilinux-fedora.b-cdn.net/os/fedora-39-gnome-202312191235.zip",
-            "icon": "fedora.icns",
-            "supported_fw": ["12.3", "12.3.1", "13.5"],
-            "extras": [
-                "https://codecs.fedoraproject.org/openh264/39/aarch64/os/Packages/g/gstreamer1-plugin-openh264-1.22.1-1.fc39.aarch64.rpm",
-                "https://codecs.fedoraproject.org/openh264/39/aarch64/os/Packages/m/mozilla-openh264-2.3.1-2.fc39.aarch64.rpm",
-                "https://codecs.fedoraproject.org/openh264/39/aarch64/os/Packages/o/openh264-2.3.1-2.fc39.aarch64.rpm"
-            ],
-            "partitions": [
-                {
-                    "name": "EFI",
-                    "type": "EFI",
-                    "size": "524288000B",
-                    "format": "fat",
-                    "volume_id": "0x131183ba",
-                    "copy_firmware": true,
-                    "copy_installer_data": true,
-                    "source": "esp"
-                },
-                {
-                    "name": "Boot",
-                    "type": "Linux",
-                    "size": "1073741824B",
-                    "image": "boot.img"
-                },
-                {
-                    "name": "Root",
-                    "type": "Linux",
-                    "size": "10839109632B",
-                    "expand": true,
-                    "image": "root.img"
-                }
-            ]
-        },
-        {
-            "name": "Fedora Asahi Remix 39 Server",
-            "default_os_name": "Fedora Linux Server",
-            "boot_object": "m1n1.bin",
-            "next_object": "m1n1/boot.bin",
-            "package": "https://asahilinux-fedora.b-cdn.net/os/fedora-39-server-202312191235.zip",
-            "icon": "fedora.icns",
-            "supported_fw": ["12.3", "12.3.1", "13.5"],
-            "extras": {},
-            "partitions": [
-                {
-                    "name": "EFI",
-                    "type": "EFI",
-                    "size": "524288000B",
-                    "format": "fat",
-                    "volume_id": "0x02507f22",
-                    "copy_firmware": true,
-                    "copy_installer_data": true,
-                    "source": "esp"
-                },
-                {
-                    "name": "Boot",
-                    "type": "Linux",
-                    "size": "1073741824B",
-                    "image": "boot.img"
-                },
-                {
-                    "name": "Root",
-                    "type": "Linux",
-                    "size": "4077891584B",
-                    "expand": true,
-                    "image": "root.img"
-                }
-            ]
-        },
-        {
-            "name": "Fedora Asahi Remix 39 Minimal",
-            "default_os_name": "Fedora Linux Minimal",
-            "boot_object": "m1n1.bin",
-            "next_object": "m1n1/boot.bin",
-            "package": "https://asahilinux-fedora.b-cdn.net/os/fedora-39-minimal-202312191235.zip",
-            "icon": "fedora.icns",
-            "supported_fw": ["12.3", "12.3.1", "13.5"],
-            "extras": {},
-            "partitions": [
-                {
-                    "name": "EFI",
-                    "type": "EFI",
-                    "size": "524288000B",
-                    "format": "fat",
-                    "volume_id": "0xfdedb06b",
-                    "copy_firmware": true,
-                    "copy_installer_data": true,
-                    "source": "esp"
-                },
-                {
-                    "name": "Boot",
-                    "type": "Linux",
-                    "size": "1073741824B",
-                    "image": "boot.img"
-                },
-                {
-                    "name": "Root",
-                    "type": "Linux",
-                    "size": "3603935232B",
-                    "expand": true,
-                    "image": "root.img"
-                }
-            ]
-        },
-        {
-            "name": "Arch Linux ARM (not recommended)",
-            "default_os_name": "Arch Linux ARM",
-            "expert": true,
+            "name": "Arch Linux ARM Asahi Remix Minimal",
+            "default_os_name": "Asahi Linux",
             "boot_object": "m1n1.bin",
             "next_object": "m1n1/boot.bin",
             "package": "asahi-base-20231012-1.zip",
